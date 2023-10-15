@@ -23,6 +23,7 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/logs
 
 # local env files
 .env
@@ -31,7 +32,16 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Developer files
+.dev/
+tsconfig.tsbuildinfo
+
 # vercel
 .vercel
 /public/workbox-*.js*
 /public/sw.js*
+
+# Editor files
+# - IntelliJ IDEA
+.idea/
+*.iml

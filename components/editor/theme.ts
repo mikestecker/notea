@@ -1,23 +1,23 @@
-import { useTheme } from 'next-themes'
-import { theme } from 'rich-markdown-editor'
-
-export const editorTheme: typeof theme = {
-  ...theme,
-  background: 'inherit',
-  text: 'inherit',
-  fontFamily: 'inherit',
-}
+import { useTheme } from 'next-themes';
+import { theme } from '@notea/rich-markdown-editor';
+import { light, dark } from '@notea/rich-markdown-editor/dist/styles/theme';
 
 export const darkTheme: typeof theme = {
-  ...editorTheme,
-}
+    ...dark,
+    background: 'inherit',
+    text: 'inherit',
+    fontFamily: 'inherit',
+};
 
 export const lightTheme: typeof theme = {
-  ...editorTheme,
-}
+    ...light,
+    background: 'inherit',
+    text: 'inherit',
+    fontFamily: 'inherit',
+};
 
 export const useEditorTheme = () => {
-  const { resolvedTheme } = useTheme()
+    const { resolvedTheme } = useTheme();
 
-  return resolvedTheme === 'dark' ? darkTheme : lightTheme
-}
+    return resolvedTheme === 'dark' ? darkTheme : lightTheme;
+};
